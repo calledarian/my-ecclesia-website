@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "BEC",
+  "name": "Cambodia Bible Education Center",
   "icons": [
     {
       "src": "favicon.ico",
@@ -9,11 +9,11 @@
     },
     {
       "src": "",
-      "type": "image/png",
+      "type": "favicon.ico",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "favicon.ico",
       "type": "image/png",
       "sizes": "512x512"
     }
