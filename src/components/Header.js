@@ -1,4 +1,6 @@
 import React from "react";
+import "../CSS/header.css"; // Import the CSS file for styling
+
 // import BEClogo from "./BEClogo.jpg";
 
 function Header() {

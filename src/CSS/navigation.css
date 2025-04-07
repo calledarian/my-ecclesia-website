@@ -1,0 +1,82 @@
+.Header-nav {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: sticky; /* Sticky navigation */
+  top: 0; /* Stick to the top of the page */
+  background-color: #333; /* Add background color for sticky effect */
+  z-index: 1000; /* Ensure it's always on top */
+}
+
+.Header-nav-list {
+  display: flex;
+  gap: 10px; /* Space between nav items (reduced space) */
+  list-style: none; /* Remove default list styling */
+}
+
+.Header-nav-item {
+  text-decoration: none; /* Remove default underline */
+  position: relative; /* For positioning pseudo-element */
+  color: #1ba8e9;
+  font-size: small; /* Smaller font size */
+  display: inline-block;
+  padding: 5px 10px; /* Reduced padding */
+  transition: color 0.3s ease, transform 0.3s ease; /* Add transition for hover effects */
+}
+
+.Header-nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 5px; /* Reduced space for underline */
+  left: 0;
+  width: 0; /* Start with no width */
+  height: 3px; /* Thinner underline */
+  background-color: #0066ff;
+  transition: width 0.3s ease;
+}
+
+.Header-nav-item:hover {
+  color: #1ba8e9;
+  transform: scale(1.05); /* Slightly smaller scale on hover */
+}
+
+.Header-nav-item:hover::after {
+  width: 100%; /* Fill the underline on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 0.1rem 0;
+  position: relative;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.5rem;
+  transition: color 0.6s;
+}
+
+.dropdown-menu li a:hover {
+  color: #1ba8e9;
+}

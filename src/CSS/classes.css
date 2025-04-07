@@ -1,0 +1,59 @@
+/* ==========================================================================
+     Classes SECTION
+     ========================================================================== */
+
+.classes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.class-item {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  width: 90%; /* Adjust the width */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.class-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.class-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.schedule-button {
+  background-color: #1ba8e9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 35px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.schedule-button:hover {
+  background-color: #0066ff;
+}
+
+.schedule-link {
+  text-decoration: none;
+  color: white;
+}
+
+.schedule-button:focus {
+  outline: none;
+}

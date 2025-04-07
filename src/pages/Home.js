@@ -1,6 +1,6 @@
 import React from "react";
-
-function Hero() {
+import "../CSS/hero.css"; // Import the CSS file for styling
+function Home() {
   return (
     <div className="Hero-container">
       <p className="Hero-subtitle">
@@ -14,4 +14,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Home;
