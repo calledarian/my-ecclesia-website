@@ -12,8 +12,7 @@ function Home() {
         start studying today!
       </p>
       <Link to="/FAQ" className="Hero-button">
-        {" "}
-        Learn More{" "}
+        Learn More
       </Link>
     </div>
   );
