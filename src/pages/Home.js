@@ -1,5 +1,7 @@
 import React from "react";
+
 import "../CSS/hero.css"; // Import the CSS file for styling
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="Hero-container">
@@ -9,7 +11,10 @@ function Home() {
         you! Message or call us to find out more and arrange a class time to
         start studying today!
       </p>
-      <button className="Hero-button">Learn More !</button>
+      <Link to="/FAQ" className="Hero-button">
+        {" "}
+        Learn More{" "}
+      </Link>
     </div>
   );
 }
