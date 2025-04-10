@@ -1,5 +1,4 @@
 import React from "react";
-
 import "../CSS/hero.css"; // Import the CSS file for styling
 import { Link } from "react-router-dom";
 function Home() {

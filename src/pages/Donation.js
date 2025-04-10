@@ -47,7 +47,7 @@ const Donation = () => {
       <div className="how-to-donate">
         <div className="bank-details">
           <div className="detail">
-            <h4>Cambodia Bank Details</h4>
+            <h4>Custodiants Of The Cambodian BEC Accounts</h4>
             <p>
               <strong>Bank:</strong> National Bank of Canada group
             </p>

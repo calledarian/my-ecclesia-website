@@ -6,7 +6,7 @@ const Classes = () => {
   return (
     <div className="classes-container">
       <div className="class-item">
-        <h2>Bible Study</h2>
+        <h2>Bible Studies</h2>
         <img
           src={require("../components/BECclass.jpg")}
           alt="Bible Plan"

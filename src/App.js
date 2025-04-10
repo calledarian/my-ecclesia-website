@@ -9,7 +9,9 @@ import Contact from "./pages/Contact"; // Ensure the Contact component is import
 import Classes from "./pages/Classes";
 import Donation from "./pages/Donation"; // Ensure the Donation component is imported correctly
 import FAQ from "./pages/FAQ.js"; // Ensure the FAQ component is imported correctly
+import { Navigate } from "react-router-dom";
 import "./CSS/global.css"; // Import global CSS styles
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path="/classes" element={<Classes />} />
         <Route path="/Donation" element={<Donation />} /> {/* Donation route */}
         <Route path="/faq" element={<FAQ />} /> {/* FAQ route */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
     </Router>
