@@ -9,6 +9,7 @@ import Contact from "./pages/Contact"; // Ensure the Contact component is import
 import Classes from "./pages/Classes";
 import Donation from "./pages/Donation"; // Ensure the Donation component is imported correctly
 import FAQ from "./pages/FAQ.js"; // Ensure the FAQ component is imported correctly
+import ScrollToTop from "./components/scrollup"; // Import the ScrollToTop component
 import { Navigate } from "react-router-dom";
 import "./CSS/global.css"; // Import global CSS styles
 
@@ -16,6 +17,7 @@ import "./CSS/global.css"; // Import global CSS styles
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Navigation />
       <Routes>
