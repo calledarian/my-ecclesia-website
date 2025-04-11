@@ -21,11 +21,11 @@ function Navigation() {
                 <h1>FAQ</h1>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/classes" className="Header-nav-item">
                 <h1>Classes</h1>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </li>
         <li>

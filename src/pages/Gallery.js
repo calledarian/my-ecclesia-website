@@ -113,6 +113,8 @@ export default function EventGallery() {
   };
 
   return (
+    <div className="gallery-page">
+
     <div className="gallery-container">
       <h1 className="gallery-title">Events Gallery</h1>
       
@@ -220,6 +222,7 @@ export default function EventGallery() {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 }

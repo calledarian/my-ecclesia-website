@@ -63,7 +63,7 @@
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    font-size: clamp(1rem, 2.5vw, 1.25rem); /* Much smaller than original 35px */
+    font-size: 35px;
     margin-top: 1.5rem;
     transition: all 0.3s ease;
     font-weight: 600;
@@ -81,11 +81,6 @@
     text-decoration: none;
     color: white;
     display: inline-block;
-  }
-  
-  .schedule-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(27, 168, 233, 0.4); /* Accessibility focus ring */
   }
   
   /* Mobile-friendly adjustments */
