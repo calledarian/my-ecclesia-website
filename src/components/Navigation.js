@@ -21,12 +21,12 @@ function Navigation() {
                 <h1>FAQ</h1>
               </Link>
             </li>
+            <li>
+              <Link to="/classes" className="Header-nav-item">
+                <h1>Classes</h1>
+              </Link>
+            </li>
           </ul>
-        </li>
-        <li>
-          <Link to="/classes" className="Header-nav-item">
-            <h1>Classes</h1>
-          </Link>
         </li>
         <li>
           <Link to="/contact" className="Header-nav-item">

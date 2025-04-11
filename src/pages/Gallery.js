@@ -10,8 +10,7 @@ export default function EventGallery() {
       description: 'Join us every Sunday for Bible readings, hymns, exhortation, and the breaking of bread.',
       images: [
         '/BECmeetingjpg.jpg',
-        '/BECmeetingjpg.jpg',
-        '/BECmeetingjpg.jpg',
+        
       ]
     },
     {
@@ -20,18 +19,19 @@ export default function EventGallery() {
       description: 'Bring your children for a fun and educational Sunday School experience.',
       images: [
         '/SundaySchoolBreakfast.jpg',
-        '/api/placeholder/800/500',
+        
       ]
     },
     {
       id: 3,
-      title: 'Baptism Day Celebration',
-      description: 'Rejoice with us as we witness a baptism and enjoy fellowship afterward.',
+      title: "LCDI Teaching",
+      description: 'Teaching the Word of God to our children in Leadership and Character Development Institute.',
       images: [
-        '/Cambodia-1.png',
-        '/api/placeholder/800/500',
-        '/api/placeholder/800/500',
-        '/api/placeholder/800/500',
+        '/LCDI.jpg',
+        '/LCDI2.jpg',
+        '/LCDI3.jpg',
+        '/LCDI4.jpg',
+        
       ]
     },
     {
@@ -42,6 +42,35 @@ export default function EventGallery() {
         '/Ethan.jpg',
         '/pam.jpg',
         '/sophie.jpg',
+      ]
+    },
+    {
+      id: 5,
+      title: 'Youth Group Activities',
+      description: 'Engage with our youth group for fun activities and spiritual growth.',
+      images: [
+        '/plays.jpg',
+        '/plays2.jpg',
+        '/plays3.jpg',
+      ]
+    },
+    {
+      id: 6,
+      title: "Sister Class",
+      description: 'Join us for a special class designed for sisters in the ecclesia.',
+      images: [
+        '/sisterclass.jpg',
+        '/sisterclass2.jpg',
+        
+      ]
+    },
+    {
+      id: 7,
+      title: 'Baptism Day Celebration',
+      description: 'Rejoice with us as we witness a baptism and enjoy fellowship afterward.',
+      images: [
+        '/Cambodia-1.png',
+        
       ]
     }
   ];

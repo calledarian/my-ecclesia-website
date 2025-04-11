@@ -1,56 +1,73 @@
+/* Main Header Navigation */
 .Header-nav {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start; /* 'left' is not a valid value for justify-content */
   align-items: center;
-  position: sticky; /* Sticky navigation */
-  top: 0; /* Stick to the top of the page */
-  background-color: #333; /* Add background color for sticky effect */
-  z-index: 1000; /* Ensure it's always on top */
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  z-index: 1000;
+  padding: 0.5rem 1rem; /* Add some padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
 }
 
+/* Navigation List */
 .Header-nav-list {
   display: flex;
-  gap: 10px; /* Space between nav items (reduced space) */
-  list-style: none; /* Remove default list styling */
+  gap: 1rem; /* Slightly increased for better spacing */
+  list-style: none;
+  margin: 0; /* Reset default margins */
+  padding: 0; /* Reset default padding */
 }
 
+/* Navigation Items */
 .Header-nav-item {
-  text-decoration: none; /* Remove default underline */
-  position: relative; /* For positioning pseudo-element */
   color: #1ba8e9;
-  font-size: small; /* Smaller font size */
+  font-size: 0.875rem; /* More precise than 'small' */
+  text-decoration: none;
+  position: relative;
   display: inline-block;
-  padding: 5px 10px; /* Reduced padding */
-  transition: color 0.3s ease, transform 0.3s ease; /* Add transition for hover effects */
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s ease, transform 0.2s ease; /* Faster transitions feel snappier */
+  font-weight: 500; /* Medium weight for better readability */
 }
 
+/* Underline effect */
 .Header-nav-item::after {
   content: "";
   position: absolute;
-  bottom: 5px; /* Reduced space for underline */
+  bottom: 0;
   left: 0;
-  width: 0; /* Start with no width */
-  height: 3px; /* Thinner underline */
-  background-color: #0066ff;
-  transition: width 0.3s ease;
+  width: 0;
+  height: 2px;
+  background-color: #1ba8e9; /* Match text color for consistency */
+  transition: width 0.2s ease-in-out;
+  opacity: 0.8; /* Slightly transparent for subtle effect */
 }
 
+/* Hover effects */
 .Header-nav-item:hover {
-  color: #1ba8e9;
-  transform: scale(1.05); /* Slightly smaller scale on hover */
+  color: #fff; /* Higher contrast on hover */
+  transform: translateY(-1px); /* Subtle upward shift instead of scale for better performance */
 }
 
 .Header-nav-item:hover::after {
-  width: 100%; /* Fill the underline on hover */
+  width: 100%;
 }
 
-/* Dropdown Menu Styles */
+/* Active state for current page */
+.Header-nav-item.active {
+  color: #fff;
+}
+
+.Header-nav-item.active::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Dropdown Menu */
 .dropdown {
   position: relative;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
 }
 
 .dropdown-menu {
@@ -60,23 +77,56 @@
   left: 0;
   background-color: #444;
   list-style: none;
-  width: 150px;
+  width: 180px; /* Slightly wider for better readability */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 1001; /* Higher than parent */
+  border-radius: 4px; /* Rounded corners */
+  padding: 0.5rem 0; /* Add some padding */
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
 }
 
+/* Show dropdown on hover with animation */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown items */
 .dropdown-menu li {
-  padding: 0.1rem 0;
-  position: relative;
+  padding: 0;
+  margin: 0;
 }
 
 .dropdown-menu li a {
-  color: white;
+  color: #ddd; /* Lighter than white for better hierarchy */
   text-decoration: none;
-  font-size: 0.5rem;
-  transition: color 0.6s;
+  font-size: 0.75rem; /* More precise than 0.5rem which is too small */
+  transition: color 0.3s, background-color 0.3s;
+  display: block; /* Make entire area clickable */
+  padding: 0.5rem 1rem;
 }
 
 .dropdown-menu li a:hover {
   color: #1ba8e9;
+  background-color: rgba(255, 255, 255, 0.05); /* Subtle highlight */
+}
+
+/* Add responsive behavior */
+@media (max-width: 768px) {
+  .Header-nav-list {
+    gap: 0.5rem;
+  }
+  
+  .Header-nav-item {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .dropdown-menu {
+    width: 160px;
+  }
 }
