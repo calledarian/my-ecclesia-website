@@ -34,6 +34,11 @@ const FAQ = () => {
       answer:
         "Absolutely! We welcome volunteers who want to support our mission, whether by teaching, assisting with events, or helping with administrative tasks.",
     },
+    {
+      question: "Is your church welcoming to everyone?",
+      answer:
+        "Yes, our church welcomes everyone, regardless of background. Our mission is to create a loving and inclusive community where individuals of all ages can grow through free English and Bible lessons. We believe in making education and spiritual support accessible to all.",
+    },
   ];
 
   return (

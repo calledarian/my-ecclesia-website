@@ -18,6 +18,7 @@
   list-style: none;
   margin: 0; /* Reset default margins */
   padding: 0; /* Reset default padding */
+  width: 100%;
 }
 
 /* Navigation Items */
@@ -74,7 +75,7 @@
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   background-color: #444;
   list-style: none;
   width: 180px; /* Slightly wider for better readability */
@@ -88,6 +89,24 @@
   transition: opacity 0.3s, transform 0.3s;
 }
 
+/* .Contacthm {
+  width: 100%;
+} */
+
+.Logohm {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+
+}
+
+/* .DonateMiddle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+
+} */
 /* Show dropdown on hover with animation */
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -113,6 +132,14 @@
 .dropdown-menu li a:hover {
   color: #1ba8e9;
   background-color: rgba(255, 255, 255, 0.05); /* Subtle highlight */
+}
+
+.Header-nav-icon {
+  border-radius: 50%;
+  width: 75px;
+  display: flex;
+  justify-content: baseline;
+  right: 5px;
 }
 
 /* Add responsive behavior */

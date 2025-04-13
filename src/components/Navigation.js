@@ -6,40 +6,39 @@ function Navigation() {
   return (
     <nav className="Header-nav">
       <ul className="Header-nav-list">
-        <li className="dropdown">
-          <Link to="/" className="Header-nav-item">
-            <h1>Home</h1>
-          </Link>
-          <ul className="dropdown-menu">
-            <li>
-              <Link to="/gallery" className="Header-nav-item">
-                <h1>Gallery</h1>
-              </Link>
-            </li>
-            <li>
-              <Link to="/faq" className="Header-nav-item">
-                <h1>FAQ</h1>
-              </Link>
-            </li>
-            {/* <li>
-              <Link to="/classes" className="Header-nav-item">
-                <h1>Classes</h1>
-              </Link>
-            </li> */}
-          </ul>
-        </li>
-        <li>
-          <Link to="/contact" className="Header-nav-item">
-            <h1>Contact</h1>
-          </Link>
-        </li>
-        <li>
-          <Link to="/donation" className="Header-nav-item">
-            <h1>Donate</h1>
-          </Link>
-        </li>
-      </ul>
-    </nav>
+
+        <div className=" Contacthm">
+          <li>
+            <Link to="/contact" className="Header-nav-item">
+              <h1>Contact</h1>
+            </Link>
+          </li>
+
+
+        </div>
+        <div className="DonateMiddle">
+          <li>
+            <Link to="/donation" className="Header-nav-item">
+              <h1>Donate</h1>
+            </Link>
+          </li>
+        </div>
+        <div className="Logohm">
+          <li className="dropdown">
+            <Link to="/" className="Header-nav-item">
+              <img src="./favicon.ico" alt="Home" className="Header-nav-icon" />
+            </Link>
+            <ul className="dropdown-menu">
+              <li>
+                <Link to="/faq" className="Header-nav-item">
+                  <h1>FAQ</h1>
+                </Link>
+              </li>
+            </ul>
+          </li>
+        </div>
+      </ul >
+    </nav >
   );
 }
 

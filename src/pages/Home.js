@@ -1,6 +1,7 @@
 import React from "react";
 import "../CSS/hero.css"; // Import the CSS file for styling
-import Classes from "../pages/Classes"; // Import the Classes component
+import EventGallery from "./Gallery";
+// import Classes from "../pages/Classes";
 function Home() {
   return (
     <div className="Main-container">
@@ -13,7 +14,7 @@ function Home() {
           start studying today!
         </p>
       </div>
-      <Classes />
+      <EventGallery />
     </div>
   );
 }
