@@ -1,5 +1,3 @@
-import React from "react";
-
 const verses = [
     "Create in me a pure heart, O God, and renew a steadfast spirit within me. - Psalm 51:10",
     "Therefore we do not lose heart. Though outwardly we are wasting away, yet inwardly we are being renewed day by day. - 2 Corinthians 4:16",
