@@ -1,0 +1,47 @@
+/* ==========================================================================
+     HERO SECTION
+     ========================================================================== */
+.Main-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 72, 72, 0.7); 
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 85%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin: 10px auto;
+}
+
+.Hero-subtitle {
+  font-size: 25px;
+  color: white;
+  padding: 20px;
+}
+
+.Hero-button {
+  background-color: #1ba8e9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 23px;
+  transition: background-color 0.3s ease;
+}
+
+.Hero-button:hover {
+  background-color: #0066ff;
+}

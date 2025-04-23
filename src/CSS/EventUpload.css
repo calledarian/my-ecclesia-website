@@ -1,0 +1,53 @@
+.event-upload-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+    font-family: sans-serif;
+  }
+  
+  .upload-form input,
+  .upload-form textarea {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .upload-form button {
+    padding: 0.6rem 1.2rem;
+    background-color: #2e86de;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .upload-form button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .event-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .event-item {
+    display: flex;
+    justify-content: space-between;
+    background: #f7f7f7;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+  }
+  
+  .event-item button {
+    background: #ff4d4f;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

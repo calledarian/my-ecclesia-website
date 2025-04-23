@@ -1,0 +1,101 @@
+/* Donation.css */
+
+/* General Container */
+.donation-container {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styles */
+.donation-container h3 {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Donation Item Style */
+.donation-container .donation-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.donation-container .donation-item h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1ba8e9;
+  margin-bottom: 1rem;
+}
+
+/* Grid Layout for Donation Items */
+.donation-container .donation-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Donation Methods Section */
+.donation-container .how-to-donate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;;
+}
+
+/* Grid Layout for Bank Details */
+.donation-container .bank-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.donation-container .bank-details .detail {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Info Section */
+.donation-container .social-info {
+  background: #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.donation-container .social-info p {
+  font-size: 1.1rem;
+}
+
+.donation-container .social-info .link {
+  color: #1ba8e9;
+}
+
+.donation-container .social-info .link:hover {
+  text-decoration: underline;
+}
+
+/* Notes Section */
+.donation-container .note {
+  max-width: 90%;
+  font-style: italic;
+  color: #555;
+}
