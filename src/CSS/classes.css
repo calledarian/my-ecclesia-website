@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Classes SECTION
+   ========================================================================== */
+
+   .classes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Add spacing between class items */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .class-item {
+    background-color: #fff;
+    border: 2px solid #e5e5e5; /* Slightly lighter border */
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%; /* Full width with padding */
+    max-width: 800px; /* Maximum width for larger screens */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .class-item:hover {
+    transform: translateY(-5px); /* Reduced from -10px for subtlety */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .class-item h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: clamp(1.3rem, 3vw, 1.8rem); /* Responsive font size */
+  }
+  
+  .class-item p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+  }
+  
+  .class-image {
+    width: 100%;
+    max-width: 500px; /* Limit image size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem 0;
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+  
+  .schedule-button {
+    background-color: #1ba8e9;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 35px;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .schedule-button:hover {
+    background-color: #0066ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .schedule-link {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+  }
+  
+  /* Mobile-friendly adjustments */
+  @media (max-width: 768px) {
+    .classes-container {
+      gap: 1.5rem;
+      padding: 1.5rem 0.75rem;
+    }
+    
+    .class-item {
+      padding: 1.5rem;
+      width: 95%;
+    }
+    
+    .schedule-button {
+      width: 100%; /* Full-width button on mobile */
+      padding: 0.75rem 1rem;
+    }
+  }
+  
+  /* Small mobile screens */
+  @media (max-width: 480px) {
+    .class-item {
+      padding: 1.25rem;
+      border-radius: 10px;
+    }
+    
+    .class-image {
+      width: 100%;
+      margin: 1rem 0;
+    }
+    
+    .class-item:hover {
+      transform: none; /* Disable hover effect on small screens */
+    }
+  }

@@ -1,0 +1,159 @@
+/* Main Header Navigation */
+.Header-nav {
+  display: flex;
+  justify-content: flex-start; /* 'left' is not a valid value for justify-content */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  z-index: 1000;
+  padding: 0.5rem 1rem; /* Add some padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+/* Navigation List */
+.Header-nav-list {
+  display: flex;
+  gap: 1rem; /* Slightly increased for better spacing */
+  list-style: none;
+  margin: 0; /* Reset default margins */
+  padding: 0; /* Reset default padding */
+  width: 100%;
+}
+
+/* Navigation Items */
+.Header-nav-item {
+  color: #1ba8e9;
+  font-size: 0.875rem; /* More precise than 'small' */
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s ease, transform 0.2s ease; /* Faster transitions feel snappier */
+  font-weight: 500; /* Medium weight for better readability */
+}
+
+/* Underline effect */
+.Header-nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1ba8e9; /* Match text color for consistency */
+  transition: width 0.2s ease-in-out;
+  opacity: 0.8; /* Slightly transparent for subtle effect */
+}
+
+/* Hover effects */
+.Header-nav-item:hover {
+  color: #fff; /* Higher contrast on hover */
+  transform: translateY(-1px); /* Subtle upward shift instead of scale for better performance */
+}
+
+.Header-nav-item:hover::after {
+  width: 100%;
+}
+
+/* Active state for current page */
+.Header-nav-item.active {
+  color: #fff;
+}
+
+.Header-nav-item.active::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #444;
+  list-style: none;
+  width: 180px; /* Slightly wider for better readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001; /* Higher than parent */
+  border-radius: 4px; /* Rounded corners */
+  padding: 0.5rem 0; /* Add some padding */
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* .Contacthm {
+  width: 100%;
+} */
+
+.Logohm {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+
+}
+
+/* .DonateMiddle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+
+} */
+/* Show dropdown on hover with animation */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  color: #ddd; /* Lighter than white for better hierarchy */
+  text-decoration: none;
+  font-size: 0.75rem; /* More precise than 0.5rem which is too small */
+  transition: color 0.3s, background-color 0.3s;
+  display: block; /* Make entire area clickable */
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a:hover {
+  color: #1ba8e9;
+  background-color: rgba(255, 255, 255, 0.05); /* Subtle highlight */
+}
+
+.Header-nav-icon {
+  border-radius: 50%;
+  width: 75px;
+  display: flex;
+  justify-content: baseline;
+  right: 5px;
+}
+
+/* Add responsive behavior */
+@media (max-width: 768px) {
+  .Header-nav-list {
+    gap: 0.5rem;
+  }
+  
+  .Header-nav-item {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .dropdown-menu {
+    width: 160px;
+  }
+}
