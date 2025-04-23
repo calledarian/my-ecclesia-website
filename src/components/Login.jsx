@@ -30,6 +30,7 @@ const Login = () => {
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         style={styles.input}
+                        required
                     />
                     <input
                         type="password"
@@ -37,6 +38,7 @@ const Login = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         style={styles.input}
+                        required
                     />
                     <button type="submit" style={styles.button}>Login</button>
                 </form>

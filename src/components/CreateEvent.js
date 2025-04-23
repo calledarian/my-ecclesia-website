@@ -126,7 +126,7 @@ export default function EventUpload() {
                     onChange={handleImageChange}
                     required
                 />
-                <button type="submit" disabled={isUploading}>
+                <button type="submit" disabled={isUploading} >
                     {isUploading ? 'Uploading...' : 'Upload Event'}
                 </button>
             </form>

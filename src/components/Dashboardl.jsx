@@ -64,7 +64,6 @@ export default function Dashboard() {
                         cursor: "pointer",
                         marginTop: "1rem",
                         display: "block",
-                        width: "100%",
                         fontSize: "1rem",
                         fontWeight: "bold",
                     }}
