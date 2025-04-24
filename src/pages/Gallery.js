@@ -41,6 +41,8 @@ export default function EventGallery() {
       i === 0 ? selectedEvent.images.length - 1 : i - 1
     );
 
+  const maxLengthOfDes = 75;
+
   return (
     <div className="gallery-page">
       <div className="gallery-container">
@@ -67,7 +69,7 @@ export default function EventGallery() {
               </div>
               <div className="event-info">
                 <h2 className="event-title">{event.title}</h2>
-                <p className="event-description">{event.description}</p>
+                <p className="event-description">{event.description.length > maxLengthOfDes ? event.description(0, maxLengthOfDes) + "..." : event.description}</p>
                 <div className="event-gallery-link">
                   View gallery ({event.images.length} photos)
                 </div>
