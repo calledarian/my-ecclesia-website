@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Gallery.css';
 
-const API_BASE_URL = 'https://bibleec-backend.onrender.com';
-
 export default function EventGallery() {
   const [events, setEvents] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
@@ -10,7 +8,7 @@ export default function EventGallery() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    fetch(`${API_BASE_URL}/event/get_all_events`)
+    fetch(`https://bibleec-backend.onrender.com/event/get_all_events`)
       .then((res) => res.json())
       .then((data) => {
         // Ensure images array exists
@@ -59,7 +57,7 @@ export default function EventGallery() {
               <div className="event-thumbnail-container">
                 {event.images[0] ? (
                   <img
-                    src={`${API_BASE_URL}/uploads/${event.images[0]}`}
+                    src={event.images[0]}              // ← direct Cloudinary URL
                     alt={event.title}
                     className="event-thumbnail"
                   />
@@ -99,11 +97,10 @@ export default function EventGallery() {
               <div className="modal-image-container">
                 {selectedEvent.images[currentImageIndex] ? (
                   <img
-                    src={`${API_BASE_URL}/uploads/${selectedEvent.images[currentImageIndex]}`}
+                    src={selectedEvent.images[currentImageIndex]}  // ← direct URL
                     alt={`${selectedEvent.title} ${currentImageIndex + 1}`}
                     className="modal-image"
                   />
-
                 ) : (
                   <div className="no-image-placeholder">No image</div>
                 )}
@@ -145,7 +142,7 @@ export default function EventGallery() {
                     onClick={() => setCurrentImageIndex(idx)}
                   >
                     <img
-                      src={`${API_BASE_URL}/uploads/${img}`}
+                      src={img}                              // ← direct URL
                       alt={`Thumb ${idx + 1}`}
                       className="thumbnail-image"
                     />
