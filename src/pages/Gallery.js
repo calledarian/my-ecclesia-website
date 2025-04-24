@@ -69,7 +69,11 @@ export default function EventGallery() {
               </div>
               <div className="event-info">
                 <h2 className="event-title">{event.title}</h2>
-                <p className="event-description">{event.description.length > maxLengthOfDes ? event.description(0, maxLengthOfDes) + "..." : event.description}</p>
+                <p className="event-description">
+                  {event.description.length > maxLengthOfDes
+                    ? event.description.substring(0, maxLengthOfDes) + "..."
+                    : event.description}
+                </p>
                 <div className="event-gallery-link">
                   View gallery ({event.images.length} photos)
                 </div>
