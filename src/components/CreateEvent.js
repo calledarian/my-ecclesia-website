@@ -9,7 +9,7 @@ export default function EventUpload() {
     const [isUploading, setIsUploading] = useState(false);
     const [events, setEvents] = useState([]);
 
-    const backendurl = process.env.backendurl;
+    const backendurl = process.env.REACT_APP_BACKEND_URL;
 
     // Fetch all events
     const fetchEvents = async () => {

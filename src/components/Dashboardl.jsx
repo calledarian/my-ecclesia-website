@@ -7,7 +7,7 @@ import axios from "axios";
 
 export default function Dashboard() {
     const navigate = useNavigate();
-    const backendurl = process.env.backendurl;
+    const backendurl = process.env.REACT_APP_BACKEND_URL;
 
     // 🔐 Verify Authentication when the dashboard is loaded
     useEffect(() => {

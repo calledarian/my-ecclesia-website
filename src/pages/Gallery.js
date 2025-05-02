@@ -7,7 +7,7 @@ export default function EventGallery() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const backendurl = process.env.backendurl;
+  const backendurl = process.env.REACT_APP_BACKEND_URL;
 
   useEffect(() => {
     fetch(`${backendurl}/event/get_all_events`)

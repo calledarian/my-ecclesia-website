@@ -4,7 +4,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 const PrivateRoute = () => {
     const [isAuthenticated, setIsAuthenticated] = React.useState(null); // Start as null (loading)
 
-    const backendurl = process.env.backendurl;
+    const backendurl = process.env.REACT_APP_BACKEND_URL;
 
     React.useEffect(() => {
         const checkAuth = async () => {
