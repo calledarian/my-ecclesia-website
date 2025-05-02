@@ -7,8 +7,10 @@ export default function EventGallery() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  const backendurl = process.env.backendurl;
+
   useEffect(() => {
-    fetch(`https://bibleec-backend.onrender.com/event/get_all_events`)
+    fetch(`${backendurl}/event/get_all_events`)
       .then((res) => res.json())
       .then((data) => {
         // Ensure images array exists

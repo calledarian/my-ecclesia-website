@@ -9,10 +9,12 @@ export default function EventUpload() {
     const [isUploading, setIsUploading] = useState(false);
     const [events, setEvents] = useState([]);
 
+    const backendurl = process.env.backendurl;
+
     // Fetch all events
     const fetchEvents = async () => {
         try {
-            const res = await axios.get('https://bibleec-backend.onrender.com/event/get_all_events');
+            const res = await axios.get(`${backendurl}/event/get_all_events`);
             setEvents(res.data);
         } catch (err) {
             console.error('Failed to fetch events:', err);
@@ -56,7 +58,7 @@ export default function EventUpload() {
             formData.append('description', description);
             images.forEach((img) => formData.append('images', img));
 
-            const res = await axios.post('https://bibleec-backend.onrender.com/event/upload', formData, {
+            const res = await axios.post(`${backendurl}/event/upload`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${token}`,
@@ -87,7 +89,7 @@ export default function EventUpload() {
             }
 
             // Send DELETE request
-            await axios.delete(`https://bibleec-backend.onrender.com/event/delete_event/${eventId}`, {
+            await axios.delete(`${backendurl}/event/delete_event/${eventId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                 },

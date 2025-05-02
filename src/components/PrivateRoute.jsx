@@ -4,12 +4,14 @@ import { Navigate, Outlet } from 'react-router-dom';
 const PrivateRoute = () => {
     const [isAuthenticated, setIsAuthenticated] = React.useState(null); // Start as null (loading)
 
+    const backendurl = process.env.backendurl;
+
     React.useEffect(() => {
         const checkAuth = async () => {
             const token = localStorage.getItem('jwt');
 
             try {
-                const response = await fetch('https://bibleec-backend.onrender.com/auth/check', {
+                const response = await fetch(`${backendurl}/auth/check`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

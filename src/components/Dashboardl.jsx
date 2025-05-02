@@ -3,8 +3,11 @@ import EventUpload from "./CreateEvent"; // Ensure the EventUpload component is 
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+
+
 export default function Dashboard() {
     const navigate = useNavigate();
+    const backendurl = process.env.backendurl;
 
     // 🔐 Verify Authentication when the dashboard is loaded
     useEffect(() => {
@@ -17,7 +20,7 @@ export default function Dashboard() {
 
         // Optional: Verify token with backend (check if token is still valid)
         axios
-            .get("https://bibleec-backend.onrender.com/auth/check", {
+            .get(`${backendurl}/auth/check`, {
                 headers: { Authorization: `Bearer ${token}` },
             })
             .catch((err) => {
@@ -33,7 +36,7 @@ export default function Dashboard() {
         const token = localStorage.getItem("jwt");
 
         if (token) {
-            await fetch("https://bibleec-backend.onrender.com/auth/logout", {
+            await fetch(`${backendurl}/auth/logout`, {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${token}`,

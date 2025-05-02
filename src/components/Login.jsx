@@ -6,11 +6,13 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
+    const backendurl = process.env.backendurl;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('https://bibleec-backend.onrender.com/auth/login', { username, password });
+            const response = await axios.post(`${backendurl}/auth/login`, { username, password });
             localStorage.setItem('jwt', response.data.token);
             window.location.href = '/dashboard';
         } catch (err) {
