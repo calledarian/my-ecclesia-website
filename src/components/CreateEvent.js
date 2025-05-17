@@ -12,18 +12,18 @@ export default function EventUpload() {
     const backendurl = process.env.REACT_APP_BACKEND_URL;
 
     // Fetch all events
-    const fetchEvents = async () => {
+    const fetchEvents = React.useCallback(async () => {
         try {
             const res = await axios.get(`${backendurl}/event/get_all_events`);
             setEvents(res.data);
         } catch (err) {
             console.error('Failed to fetch events:', err);
         }
-    };
+    }, [backendurl]);
 
     useEffect(() => {
         fetchEvents();
-    }, []);
+    }, [fetchEvents]);
 
     // Handle file input
     const handleImageChange = (e) => {

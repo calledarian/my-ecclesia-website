@@ -31,7 +31,7 @@ const PrivateRoute = () => {
         };
 
         checkAuth();
-    }, []);
+    }, [backendurl]);
 
     if (isAuthenticated === null) {
         // Still checking auth status

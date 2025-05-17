@@ -21,7 +21,7 @@ export default function EventGallery() {
         setEvents(processed);
       })
       .catch((err) => console.error('Error fetching events:', err));
-  }, []);
+  }, [backendurl]);
 
   const openModal = (event) => {
     setSelectedEvent(event);

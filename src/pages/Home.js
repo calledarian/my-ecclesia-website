@@ -1,10 +1,18 @@
 import React from "react";
 import "../CSS/hero.css"; // Import the CSS file for styling
 import EventGallery from "./Gallery";
-// import Classes from "../pages/Classes";
+import { Helmet } from "react-helmet";
+
 function Home() {
   return (
     <div className="Main-container">
+      <Helmet>
+        <title>Cambodia Bible Education Center | BibleEC</title>
+        <meta
+          name="description"
+          content="BibleEC is a Bible education platform for youth and teens in Cambodia."
+        />
+      </Helmet>
 
       <div className="Hero-container">
         <p className="Hero-subtitle">
@@ -14,6 +22,7 @@ function Home() {
           start studying today!
         </p>
       </div>
+
       <EventGallery />
     </div>
   );

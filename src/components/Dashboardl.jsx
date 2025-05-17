@@ -27,7 +27,7 @@ export default function Dashboard() {
                 console.error("Token verification failed:", err);
                 navigate("/login"); // Redirect to login if token is invalid
             });
-    }, [navigate]);
+    }, [navigate, backendurl]);
 
     // 🚪 Logout functionality
     const handleLogout = async () => {
