@@ -1,45 +1,48 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import GLightbox from 'glightbox';
+import 'glightbox/dist/css/glightbox.min.css';
 import './Gallery.css';
 
-const API_BASE_URL = 'https://bibleec-backend.onrender.com';
-
 export default function EventGallery() {
-  const [events, setEvents] = useState([]);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedEvent, setSelectedEvent] = useState(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const events = [
+    {
+      id: 1,
+      title: "LCDI Teaching",
+      description: "Teaching LCDI children about God by acting Bible stories.",
+      path: "/LCDI",
+      images: ["LCDI.jpg", "LCDI2.jpg", "LCDI3.jpg", "LCDI4.jpg"]
+    },
+    {
+      id: 2,
+      title: "2025 Bible School",
+      description: "Brothers and sisters from all around the world gathering to have fellowship, learn, grow in Bible.",
+      path: "/BS",
+      images: ["bs1.jpg", "bs2.jpg", "bs3.jpg", "bs4.jpg"]
+    },
+    {
+      id: 3,
+      title: "June 2025 Bible Seminar",
+      description: "Teaching the truth in Cambodian provinces and an growing youth in God.",
+      path: "/TP",
+      images: ["tp1.jpg", "tp2.jpg", "tp3.jpg", "tp4.jpg"]
+    },
+    {
+      id: 4,
+      title: "Game Activities",
+      description: "Sportic, Strategic activities for our dormers.",
+      path: "/GAME-DAYS",
+      images: ["plays.jpg", "plays2.jpg", "plays3.jpg"]
+    }
+  ];
 
   useEffect(() => {
-    fetch(`${API_BASE_URL}/event/get_all_events`)
-      .then((res) => res.json())
-      .then((data) => {
-        // Ensure images array exists
-        const processed = data.map((e) => ({
-          ...e,
-          images: e.images || [],
-        }));
-        setEvents(processed);
-      })
-      .catch((err) => console.error('Error fetching events:', err));
+    GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      zoomable: true
+    });
   }, []);
-
-  const openModal = (event) => {
-    setSelectedEvent(event);
-    setCurrentImageIndex(0);
-    setModalOpen(true);
-  };
-  const closeModal = () => {
-    setModalOpen(false);
-    setSelectedEvent(null);
-  };
-  const nextImage = () =>
-    setCurrentImageIndex((i) =>
-      i === selectedEvent.images.length - 1 ? 0 : i + 1
-    );
-  const prevImage = () =>
-    setCurrentImageIndex((i) =>
-      i === 0 ? selectedEvent.images.length - 1 : i - 1
-    );
 
   return (
     <div className="gallery-page">
@@ -49,105 +52,44 @@ export default function EventGallery() {
         {/* Events Grid */}
         <div className="events-grid">
           {events.map((event) => (
-            <div
-              key={event.id}
-              className="event-card"
-              onClick={() => openModal(event)}
-            >
+            <div key={event.id} className="event-card">
               <div className="event-thumbnail-container">
-                {event.images[0] ? (
+                <a
+                  href={`${event.path}/${event.images[0]}`}
+                  className="glightbox"
+                  data-gallery={`gallery-${event.id}`}
+                  data-title={event.title}
+                  data-description={event.description}
+                >
                   <img
-                    src={`${API_BASE_URL}/uploads/${event.images[0]}`}
+                    src={`${event.path}/${event.images[0]}`}
                     alt={event.title}
                     className="event-thumbnail"
                   />
-                ) : (
-                  <div className="empty-thumbnail">No image available</div>
-                )}
+                </a>
               </div>
               <div className="event-info">
                 <h2 className="event-title">{event.title}</h2>
                 <p className="event-description">{event.description}</p>
-                <div className="event-gallery-link">
-                  View gallery ({event.images.length} photos)
-                </div>
+
+                {/* Hidden extra images for lightbox */}
+                {event.images.slice(1).map((img, idx) => (
+                  <a
+                    key={idx}
+                    href={`${event.path}/${img}`}
+                    className="glightbox"
+                    data-gallery={`gallery-${event.id}`}
+                    data-title={event.title}
+                    data-description={event.description}
+                    style={{ display: 'none' }}
+                  >
+                    Hidden
+                  </a>
+                ))}
               </div>
             </div>
           ))}
         </div>
-
-        {/* Modal */}
-        {modalOpen && selectedEvent && (
-          <div className="modal-overlay" onClick={closeModal}>
-            <div
-              className="modal-container"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="modal-header">
-                <h3 className="modal-title">{selectedEvent.title}</h3>
-                <button onClick={closeModal} className="modal-close-button">
-                  ×
-                </button>
-              </div>
-
-              <div className="modal-image-container">
-                {selectedEvent.images[currentImageIndex] ? (
-                  <img
-                    src={`${API_BASE_URL}/uploads/${selectedEvent.images[currentImageIndex]}`}
-                    alt={`${selectedEvent.title} ${currentImageIndex + 1}`}
-                    className="modal-image"
-                  />
-                ) : (
-                  <div className="no-image-placeholder">No image</div>
-                )}
-
-                {selectedEvent.images.length > 1 && (
-                  <>
-                    <button
-                      className="nav-button prev-button"
-                      onClick={prevImage}
-                    >
-                      &#10094;
-                    </button>
-                    <button
-                      className="nav-button next-button"
-                      onClick={nextImage}
-                    >
-                      &#10095;
-                    </button>
-                  </>
-                )}
-
-                <div className="image-counter">
-                  {selectedEvent.images.length
-                    ? `${currentImageIndex + 1} / ${selectedEvent.images.length}`
-                    : 'No images'}
-                </div>
-              </div>
-
-              <div className="modal-description">
-                <p>{selectedEvent.description}</p>
-              </div>
-
-              <div className="thumbnails-container">
-                {selectedEvent.images.map((img, idx) => (
-                  <div
-                    key={idx}
-                    className={`thumbnail ${idx === currentImageIndex ? 'active-thumbnail' : ''
-                      }`}
-                    onClick={() => setCurrentImageIndex(idx)}
-                  >
-                    <img
-                      src={`${API_BASE_URL}/uploads/${img}`}
-                      alt={`Thumb ${idx + 1}`}
-                      className="thumbnail-image"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

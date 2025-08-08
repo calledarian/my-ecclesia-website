@@ -1,49 +1,44 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import "../CSS/navigation.css"; // Import the separate CSS file
 
 function Navigation() {
   return (
-    <nav className="Header-nav">
-      <ul className="Header-nav-list">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div className="container d-flex align-items-center justify-content-between">
 
-        <div className=" Contacthm">
-          <li>
-            <Link to="/contact" className="Header-nav-item">
-              <h1>Contact</h1>
+        <ul className="navbar-nav d-flex flex-row flex-grow-1 justify-content-start gap-3 mb-0">
+          {/* First two links (left) */}
+          <li className="nav-item">
+            <Link to="/contact" className="nav-link px-2">
+              Contact
             </Link>
           </li>
-
-
-        </div>
-        <div className="DonateMiddle">
-          <li>
-            <Link to="/donation" className="Header-nav-item">
-              <h1>Donate</h1>
+          <li className="nav-item">
+            <Link to="/donation" className="nav-link px-2">
+              Donate
             </Link>
           </li>
-        </div>
-        <div className="Logohm">
-          <li className="dropdown">
-            <Link to="/" className="Header-nav-item">
-              <img src="./favicon.ico" alt="Home" className="Header-nav-icon" />
+        </ul>
+
+        {/* Center logo */}
+        <Link to="/" className="navbar-brand mx-3 d-none d-sm-block" aria-label="Home">
+          <img src="./favicon.ico" alt="Logo" width="48" height="48" className="rounded-circle" />
+        </Link>
+
+        <ul className="navbar-nav d-flex flex-row flex-grow-1 justify-content-end gap-3 mb-0">
+          {/* Last two links (right) */}
+          <li className="nav-item">
+            <Link to="/faq" className="nav-link px-2">
+              FAQ
             </Link>
-            <ul className="dropdown-menu">
-              <li>
-                <Link to="/faq" className="Header-nav-item">
-                  <h1>FAQ</h1>
-                </Link>
-              </li>
-              <li>
-                <Link to="/dashboard" className="Header-nav-item">
-                  <h1>Dashboard</h1>
-                </Link>
-              </li>
-            </ul>
           </li>
-        </div>
-      </ul >
-    </nav >
+        </ul>
+
+        {/* Mobile logo */}
+        <Link to="/" className="navbar-brand d-sm-none mx-auto" aria-label="Home">
+          <img src="./favicon.ico" alt="Logo" width="40" height="40" className="rounded-circle" />
+        </Link>
+      </div>
+    </nav>
   );
 }
 
