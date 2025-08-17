@@ -8,30 +8,37 @@ export default function EventGallery() {
     {
       id: 1,
       title: "LCDI Teaching",
-      description: "Teaching LCDI children about God by acting Bible stories.",
+      description: "Sharing God’s Word with LCDI children through fun Bible story dramas and activities.",
       path: "/LCDI",
       images: ["LCDI.jpg", "LCDI2.jpg", "LCDI3.jpg", "LCDI4.jpg"]
     },
     {
       id: 2,
       title: "2025 Bible School",
-      description: "Brothers and sisters from all around the world gathering to have fellowship, learn, grow in Bible.",
+      description: "A worldwide gathering of brothers and sisters to fellowship, learn, and grow deeper in God’s Word.",
       path: "/BS",
       images: ["bs1.jpg", "bs2.jpg", "bs3.jpg", "bs4.jpg"]
     },
     {
       id: 3,
       title: "June 2025 Bible Seminar",
-      description: "Teaching the truth in Cambodian provinces and an growing youth in God.",
+      description: "Spreading the truth across Cambodian provinces and raising up youth who are strong in faith.",
       path: "/TP",
       images: ["tp1.jpg", "tp2.jpg", "tp3.jpg", "tp4.jpg"]
     },
     {
       id: 4,
       title: "Game Activities",
-      description: "Sportic, Strategic activities for our dormers.",
+      description: "Sports and strategy games designed to build teamwork and joy among our dorm students.",
       path: "/GAME-DAYS",
       images: ["plays.jpg", "plays2.jpg", "plays3.jpg"]
+    },
+    {
+      id: 5,
+      title: "Aug 2025 Farm Bible School",
+      description: "A countryside Bible school experience focused on fellowship, learning, and living God’s Word together.",
+      path: "/FARM",
+      images: ["p1.jpg", "p2.jpg", "p3.jpg", "p4.jpg"]
     }
   ];
 
