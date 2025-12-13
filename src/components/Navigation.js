@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Navigation() {
   return (
     <header className="sticky-top bg-white shadow-sm">
-      <div className="container py-2">
+      <div className="container">
         <nav className="navbar navbar-expand-lg">
           {/* Brand */}
           <Link to="/" className="navbar-brand">
@@ -30,7 +30,15 @@ function Navigation() {
           </Link>
 
           {/* Right actions */}
-          <div className="d-flex align-items-center gap-3 mx-5 ms-auto">
+          <div className="d-flex align-items-center gap-3 my-5">
+            <a
+              href="https://instagram.com/fieldworkers_in_cambodia"
+              target="_blank"
+              rel="noreferrer"
+              className="text-dark"
+            >
+              <i className="bi bi-instagram fs-4 fs-sm-5"></i>
+            </a>
             <a
               href="https://www.facebook.com/PPbec/"
               target="_blank"
@@ -38,7 +46,6 @@ function Navigation() {
             >
               <i className="bi bi-facebook fs-4 fs-sm-5"></i>
             </a>
-
             <a
               href="https://t.me/seunthavann"
               target="_blank"
@@ -73,13 +80,13 @@ function Navigation() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/donate" className="nav-link fw-bold">
+                <Link to="/donation" className="nav-link fw-bold">
                   Donate
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/faq" className="nav-link fw-bold">
-                  Question/Answer
+                  Questions/Answers
                 </Link>
               </li>
             </ul>
