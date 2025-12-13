@@ -46,7 +46,7 @@ const Footer = () => {
           <div className="col-6 col-md-4 mb-4">
             <h6 className="fw-bold mb-3">Contact</h6>
             <p className="mb-1 small text-secondary">Phone: +855 78 959 342</p>
-            <p className="mb-1 small text-secondary">Email: phnompenh.bec@gmail.com</p>
+            <p className="mb-1 small text-secondary">Email: jonnykatie1705@gmail.com</p>
             <p className="mb-0 small text-secondary">Address: 444, Street 598, Toul Kork, Cambodia</p>
           </div>
         </div>
