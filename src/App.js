@@ -24,16 +24,16 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
+        {/* <Route path="/gallery" element={<Gallery />} /> */}
         <Route path="/contact" element={<Contact />} />
-        <Route path="/Donation" element={<Donation />} />
+        <Route path="/donation" element={<Donation />} />
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} /> */}
 
         {/* Wrap protected route(s) inside a parent route with element={<PrivateRoute />} */}
-        <Route element={<PrivateRoute />}>
+        {/* <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
-        </Route>
+        </Route> */}
 
 
         <Route path="*" element={<Navigate to="/" />} />
