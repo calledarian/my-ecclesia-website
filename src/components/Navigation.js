@@ -2,43 +2,91 @@ import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
-      <div className="container d-flex align-items-center justify-content-between">
+    <header className="sticky-top bg-white shadow-sm">
+      <div className="container py-2">
+        <nav className="navbar navbar-expand-lg">
+          {/* Brand */}
+          <Link to="/" className="navbar-brand">
+            <div className="d-flex flex-column align-items-center">
+              <div className="d-flex align-items-center gap-3">
+                <img
+                  src="./favicon.ico"
+                  alt="Logo"
+                  width="68"
+                  height="90"
+                  className="img-fluid"
+                />
 
-        <ul className="navbar-nav d-flex flex-row flex-grow-1 justify-content-start gap-3 mb-0">
-          {/* First two links (left) */}
-          <li className="nav-item">
-            <Link to="/contact" className="nav-link px-2">
-              Contact
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/donation" className="nav-link px-2">
-              Donate
-            </Link>
-          </li>
-        </ul>
+                <div className="d-none d-lg-flex flex-column">
+                  <span>
+                    មជ្ឈមណ្ឌលអប់រំព្រះគម្ពីរកម្ពុជា។
+                  </span>
+                  <strong>
+                    Cambodia Bible Education Centre
+                  </strong>
+                </div>
+              </div>
+            </div>
+          </Link>
 
-        {/* Center logo */}
-        <Link to="/" className="navbar-brand mx-3 d-none d-sm-block" aria-label="Home">
-          <img src="./favicon.ico" alt="Logo" width="48" height="48" className="rounded-circle" />
-        </Link>
+          {/* Right actions */}
+          <div className="d-flex align-items-center gap-3 mx-5 ms-auto">
+            <a
+              href="https://www.facebook.com/PPbec/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="bi bi-facebook fs-4 fs-sm-5"></i>
+            </a>
 
-        <ul className="navbar-nav d-flex flex-row flex-grow-1 justify-content-end gap-3 mb-0">
-          {/* Last two links (right) */}
-          <li className="nav-item">
-            <Link to="/faq" className="nav-link px-2">
-              FAQ
-            </Link>
-          </li>
-        </ul>
+            <a
+              href="https://t.me/seunthavann"
+              target="_blank"
+              rel="noreferrer"
+              className="text-dark"
+            >
+              <i className="bi bi-telegram fs-4 fs-sm-5"></i>
+            </a>
+          </div>
 
-        {/* Mobile logo */}
-        <Link to="/" className="navbar-brand d-sm-none mx-auto" aria-label="Home">
-          <img src="./favicon.ico" alt="Logo" width="40" height="40" className="rounded-circle" />
-        </Link>
+          {/* Toggler */}
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#primaryNavigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          {/* Navigation */}
+          <div className="collapse navbar-collapse" id="primaryNavigation">
+            <ul className="navbar-nav ms-lg-auto">
+              <li className="nav-item">
+                <Link to="/" className="nav-link fw-bold">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/contact" className="nav-link fw-bold">
+                  Contact
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/donate" className="nav-link fw-bold">
+                  Donate
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/faq" className="nav-link fw-bold">
+                  Question/Answer
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
 

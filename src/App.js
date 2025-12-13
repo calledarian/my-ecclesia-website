@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
@@ -15,15 +14,16 @@ import "./CSS/global.css"; // Import global CSS styles
 import Login from "./components/Login.jsx";
 import PrivateRoute from "./components/PrivateRoute"; // Ensure the PrivateRoute component is imported correctly
 import Dashboard from "./components/Dashboardl"; // Ensure the Dashboard component is imported correctly
-
+import "bootstrap-icons/font/bootstrap-icons.css";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Header />
       <Navigation />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
