@@ -80,6 +80,11 @@ function Navigation() {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link to="/forms" className="nav-link fw-bold">
+                  Forms
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link to="/donation" className="nav-link fw-bold">
                   Donate
                 </Link>

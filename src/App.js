@@ -15,6 +15,7 @@ import "./CSS/global.css"; // Import global CSS styles
 // import Dashboard from "./components/Dashboardl"; // Ensure the Dashboard component is imported correctly
 import "bootstrap-icons/font/bootstrap-icons.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Forms from "./pages/Forms.js";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/donation" element={<Donation />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/forms" element={<Forms />} />
         {/* <Route path="/login" element={<Login />} /> */}
 
         {/* Wrap protected route(s) inside a parent route with element={<PrivateRoute />} */}
