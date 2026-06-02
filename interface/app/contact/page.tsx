@@ -7,26 +7,24 @@ export default function Contact() {
       </p>
 
       <div className="row g-4 mb-5">
-        <div className="col-12 col-md-4">
+        {/* <div className="col-12 col-md-4">
           <div className="card h-100 border-0 shadow-sm">
             <div className="card-body">
               <h5 className="card-title fw-bold">Email</h5>
-              <a href="mailto:jonnykatie1705@gmail.com" className="text-decoration-none text-secondary">
-                jonnykatie1705@gmail.com
+              <a href="mailto:" className="text-decoration-none text-secondary">
               </a>
             </div>
           </div>
-        </div>
-        <div className="col-12 col-md-4">
+        </div> */}
+        {/* <div className="col-12 col-md-4">
           <div className="card h-100 border-0 shadow-sm">
             <div className="card-body">
               <h5 className="card-title fw-bold">Phone</h5>
-              <a href="tel:+85578959342" className="text-decoration-none text-secondary">
-                +855 78 959 342
+              <a href="tel:" className="text-decoration-none text-secondary">
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="col-12 col-md-4">
           <div className="card h-100 border-0 shadow-sm">
             <div className="card-body">
