@@ -20,17 +20,17 @@ const faqData = [
       </>
     ),
   },
-  {
-    question: 'How can I get involved?',
-    answer: (
-      <>
-        We'd love to have volunteers to help teach English through the Bible at BEC. Email Jonny
-        (BEC Manager) at{' '}
-        <a href="mailto:jonnykatie1705@gmail.com">jonnykatie1705@gmail.com</a> to find out more
-        information.
-      </>
-    ),
-  },
+  // {
+  //   question: 'How can I get involved?',
+  //   answer: (
+  //     <>
+  //       We'd love to have volunteers to help teach English through the Bible at BEC. Email Jonny
+  //       (BEC Manager) at{' '}
+  //       <a href="mailto:jonnykatie1705@gmail.com">jonnykatie1705@gmail.com</a> to find out more
+  //       information.
+  //     </>
+  //   ),
+  // },
   {
     question: 'How close is the BEC to shops and essential supplies?',
     answer:
