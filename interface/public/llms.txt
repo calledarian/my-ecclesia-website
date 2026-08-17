@@ -1,0 +1,18 @@
+# Cambodia Bible Education Centre (BEC)
+
+> Official website of the Cambodia Bible Education Centre in Phnom Penh. Free Bible education and English classes for all Cambodians.
+
+The canonical website is https://bec.cheddybytes.com.
+The previous address https://bec.arian.my has permanently moved here.
+
+## Pages
+
+- [Home](https://bec.cheddybytes.com/): Bible-English classes, group studies, and event gallery
+- [Contact](https://bec.cheddybytes.com/contact): Address, map, Facebook, and Instagram
+- [Forms](https://bec.cheddybytes.com/forms): Feedback form
+- [Donate](https://bec.cheddybytes.com/donation): How to support BEC ministry
+- [FAQ](https://bec.cheddybytes.com/faq): Visa, travel, and fieldworker questions
+
+## Optional
+
+- [Full site summary](https://bec.cheddybytes.com/llms-full.txt): Longer description for assistants

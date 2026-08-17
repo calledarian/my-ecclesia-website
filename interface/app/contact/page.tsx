@@ -1,3 +1,8 @@
+import type { Metadata } from 'next';
+import { pageMetadata } from '../lib/site';
+
+export const metadata: Metadata = pageMetadata('/contact');
+
 export default function Contact() {
   return (
     <div className="container py-5">
